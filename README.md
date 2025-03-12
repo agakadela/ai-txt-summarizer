@@ -16,7 +16,7 @@
 4. Click **"Load Unpacked"** and select the unzipped folder.
 5. Start summarizing webpages! 🚀
 
-🔗 **[Privacy Policy](https://github.com/agakadela/ai-text-summarizer/blob/main/PRIVACY_POLICY.md)**  
+🔗 **[Privacy Policy](https://agakadela.github.io/ai-txt-summarizer/privacy-policy.html)**  
 📥 **[Download the Extension](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)**
 
 ---
