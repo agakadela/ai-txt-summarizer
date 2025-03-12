@@ -10,16 +10,16 @@
 
 ## Features:
 
-✅ One-click summarization of any webpage
-✅ Choose between OpenAI & Google Gemini AI models
-✅ Generates clean, structured summaries
+✅ One-click summarization of any webpage  
+✅ Choose between OpenAI & Google Gemini AI models  
+✅ Generates clean, structured summaries  
 ✅ Lightweight & privacy-friendly (No tracking or data storage)
 
 ## How It Works
 
-1️⃣ Click the AI Summarizer Icon on any webpage
-2️⃣ Choose Your AI Model (OpenAI or Gemini)
-3️⃣ Get an Instant Summary!
+1️⃣ Click the AI Summarizer Icon on any webpage  
+2️⃣ Choose Your AI Model (OpenAI or Gemini)  
+3️⃣ Get an Instant Summary!  
 4️⃣ Copy or Share the summary anywhere
 
 ## Demo
