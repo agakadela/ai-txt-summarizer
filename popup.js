@@ -31,23 +31,71 @@ document.addEventListener("DOMContentLoaded", function () {
     setLoading(true);
     statusMessage.textContent = "Analyzing page content...";
 
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.scripting.executeScript(
-        {
-          target: { tabId: tabs[0].id },
-          function: extractTextFromPage,
-        },
-        async (results) => {
-          if (results && results[0].result) {
-            statusMessage.textContent = "Extracting relevant content...";
-            summarizeText(results[0].result);
-          } else {
-            setLoading(false);
-            statusMessage.textContent =
-              "Error: Unable to extract text from this page.";
-          }
+    // Check if we can access the current tab
+    chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
+      if (!tabs[0]?.id) {
+        setLoading(false);
+        statusMessage.textContent =
+          "Error: Cannot access this page. Try a different page.";
+        return;
+      }
+
+      const currentTab = tabs[0];
+
+      // Check if we can inject scripts into this page
+      if (!currentTab.url?.startsWith("http")) {
+        setLoading(false);
+        statusMessage.textContent =
+          "Error: Can only summarize web pages (http/https).";
+        return;
+      }
+
+      try {
+        // First inject the content script
+        await chrome.scripting.executeScript({
+          target: { tabId: currentTab.id },
+          func: () => {
+            // Simple test function to verify script injection works
+            return true;
+          },
+        });
+
+        // If we get here, script injection works, now inject our content script
+        await chrome.scripting.executeScript({
+          target: { tabId: currentTab.id },
+          files: ["content.js"],
+        });
+
+        // Then execute the extraction function
+        const results = await chrome.scripting.executeScript({
+          target: { tabId: currentTab.id },
+          func: () => {
+            return document.body.innerText;
+          },
+        });
+
+        if (results && results[0]?.result) {
+          statusMessage.textContent = "Extracting relevant content...";
+          summarizeText(results[0].result);
+        } else {
+          setLoading(false);
+          statusMessage.textContent =
+            "Error: Unable to extract text from this page.";
         }
-      );
+      } catch (error) {
+        setLoading(false);
+        console.error("Script injection error:", error);
+        if (error.message.includes("Cannot access a chrome:// URL")) {
+          statusMessage.textContent =
+            "Error: Cannot summarize Chrome system pages.";
+        } else if (error.message.includes("Missing host permission")) {
+          statusMessage.textContent =
+            "Error: Please reload the page and try again.";
+        } else {
+          statusMessage.textContent =
+            "Error: Could not access page content. Try reloading the page.";
+        }
+      }
     });
   });
 

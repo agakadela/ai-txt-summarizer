@@ -4,7 +4,6 @@
   "version": "1.0",
   "description": "Summarize web pages using OpenAI GPT-4o-mini or Google Gemini 2.0 Flash",
   "permissions": ["storage", "activeTab", "scripting"],
-  "host_permissions": ["http://*/*", "https://*/*"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -21,11 +20,5 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"]
-    }
-  ],
   "options_page": "settings.html"
 }
