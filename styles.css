@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  width: 450px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.model-switch {
+  display: flex;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.model-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.model-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.model-btn.active {
+  background: #ff8c00;
+  color: white;
+  font-weight: bold;
+}
+
+.model-btn:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+.summary-container {
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 12px;
+}
+
+.summary-content {
+  width: 100%;
+  height: 200px;
+  padding: 12px;
+  overflow-y: auto;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+/* Add proper spacing between elements */
+.summary-content h1,
+.summary-content h2,
+.summary-content h3 {
+  margin: 1.5em 0 0.5em;
+}
+
+.summary-content h1:first-child,
+.summary-content h2:first-child,
+.summary-content h3:first-child {
+  margin-top: 0;
+}
+
+.summary-content p {
+  margin: 1em 0;
+}
+
+.summary-content ul {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.summary-content li {
+  margin: 0.5em 0;
+}
+
+.summary-content section {
+  margin: 1.5em 0;
+}
+
+.summary-content section:first-child {
+  margin-top: 0;
+}
+
+.summary-content section:last-child {
+  margin-bottom: 0;
+}
+
+.status-message {
+  margin-top: 10px;
+}
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center; /* Keep buttons aligned properly */
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ff8c00;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out; /* Smoother hover effect */
+}
+
+.primary-btn:hover {
+  background: #ff8c00;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Improved Input Fields for Better Visibility */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Added border for better contrast */
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Dark mode settings UI */
+.settings-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

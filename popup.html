@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Summarizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>🔍 AI Text Summarizer</h2>
+
+      <div class="model-switch">
+        <button id="openaiBtn" class="model-btn active" data-model="openai">
+          OpenAI
+        </button>
+        <button id="geminiBtn" class="model-btn" data-model="gemini">
+          Gemini
+        </button>
+      </div>
+
+      <div class="summary-container">
+        <div
+          id="summaryOutput"
+          class="summary-content"
+          placeholder="Summary will appear here..."
+        ></div>
+        <div id="charCount" class="char-count">0 characters</div>
+      </div>
+
+      <div class="button-group">
+        <button id="summarizeBtn" class="primary-btn">
+          <span id="summarizeBtnText">Summarize Page</span>
+          <span id="loadingSpinner" class="spinner hidden"></span>
+        </button>
+        <div class="secondary-buttons">
+          <button id="copyBtn" class="secondary-btn">📋 Copy</button>
+          <button id="settingsBtn" class="secondary-btn">⚙️ Settings</button>
+        </div>
+      </div>
+
+      <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

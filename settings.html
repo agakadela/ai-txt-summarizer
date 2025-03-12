@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Summarizer Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+      }
+      .container {
+        width: 100%;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+        font-weight: bold;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      input[type="password"] {
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      a {
+        color: #ff8c00;
+      }
+
+      .api-tip {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+
+        border-radius: 4px;
+        text-align: left;
+        font-size: 14px;
+      }
+      .api-section {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      .model-selection {
+        margin-top: 30px;
+      }
+      #saveApiKey {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #ff8c00;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out; /* Smoother hover effect */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>🔧 AI Summarizer Settings</h2>
+
+      <div class="model-selection">
+        <label for="defaultModel">Default AI Model:</label>
+        <select id="defaultModel">
+          <option value="openai">OpenAI GPT-4o-mini</option>
+          <option value="gemini">Google Gemini 2.0 Flash</option>
+        </select>
+      </div>
+
+      <div class="api-section">
+        <h3>OpenAI Settings</h3>
+        <label for="apiKeyInput">OpenAI API Key:</label>
+        <input
+          type="password"
+          id="apiKeyInput"
+          placeholder="Enter your OpenAI API key here"
+        />
+
+        <div class="api-tip">
+          <p><strong>How to get an OpenAI API key:</strong></p>
+          <ol>
+            <li>
+              Go to
+              <a href="https://platform.openai.com/signup" target="_blank"
+                >OpenAI</a
+              >
+              and create an account
+            </li>
+            <li>Navigate to the API section</li>
+            <li>Create a new API key</li>
+            <li>Copy and paste the key above</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="api-section">
+        <h3>Google Gemini Settings</h3>
+        <label for="geminiApiKeyInput">Gemini API Key:</label>
+        <input
+          type="password"
+          id="geminiApiKeyInput"
+          placeholder="Enter your Google Gemini API key here"
+        />
+
+        <div class="api-tip">
+          <p><strong>How to get a Gemini API key:</strong></p>
+          <ol>
+            <li>
+              Go to
+              <a href="https://aistudio.google.com/app/apikey" target="_blank"
+                >Google AI Studio</a
+              >
+              and create an account
+            </li>
+            <li>Click on "Get API key" in the API section</li>
+            <li>Create a new API key</li>
+            <li>Copy and paste the key above</li>
+          </ol>
+        </div>
+      </div>
+
+      <button id="saveApiKey">Save Settings</button>
+
+      <div class="api-tip">
+        <p>
+          <strong>Note:</strong> Your API keys are stored locally on your device
+          and are never sent to our servers.
+        </p>
+      </div>
+    </div>
+
+    <script src="settings.js"></script>
+  </body>
+</html>
