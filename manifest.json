@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "AI Text Summarizer",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Summarize web pages using OpenAI GPT-4o-mini or Google Gemini 2.0 Flash",
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
@@ -16,9 +16,6 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  },
-  "background": {
-    "service_worker": "background.js"
   },
   "options_page": "settings.html"
 }
