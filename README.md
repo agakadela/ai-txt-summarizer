@@ -24,7 +24,7 @@
 
 ## Demo
 
-📺 Watch it in action: (coming soon)
+📺 Watch it in action: **[Youtube Video](https://www.youtube.com/watch?v=6mJWXYh_o_M)**
 
 ## Manual Installation (For Developers)
 
@@ -38,11 +38,11 @@
 
 📄 **[Read Privacy Policy](https://agakadela.github.io/ai-txt-summarizer/privacy-policy.html)**
 
-## Download the Extension
+## Use the Extension
 
-🔗 Chrome Web Store (Coming Soon)
+🔗 Chrome Web Store
 
-📥 **[Download the Extension](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)**
+📥 **[Download the Extension](https://chromewebstore.google.com/detail/binndgepjgjlmmgkodplhbcccmdcnobh?utm_source=item-share-cb)**
 
 ## Support & Issues
 
